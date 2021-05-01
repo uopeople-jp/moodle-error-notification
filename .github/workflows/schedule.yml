@@ -1,0 +1,13 @@
+name: Schedule
+
+on:
+    schedule:
+        - cron: '10 * * * *'
+
+jobs:
+    build:
+        name: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: sh
+              run: sh server-down-notification.sh
