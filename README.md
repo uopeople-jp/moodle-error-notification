@@ -1,4 +1,4 @@
-# server-down-notification
+# moodle-error-notification
 
 ### 概要
 moodleのサーバーにリクエストを送りステータスコードが400番台、500番台の時にSlackに通知するアプリ
