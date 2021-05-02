@@ -4,10 +4,17 @@ on:
     schedule:
         - cron: '*/5 * * * *'
 
+    workflow_dispatch:
+
 jobs:
     build:
         name: build
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v2
             - name: sh
               run: sh server_check.sh
+              env:
+                  SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
+
+
