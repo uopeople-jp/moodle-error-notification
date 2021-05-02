@@ -9,8 +9,8 @@ curl -I $url > check # -Iでヘッダーのみ出力しcheckに出力
 STATUS_CODE=`grep HTTP check | awk '{print $2}'`
 
 if [ $STATUS_CODE -ne 200 ];then
-    curl -X POST -H 'Content-type: application/json' --data "{'text': 'Moodle落ちてます:cry:\nステータスコード: ${STATUS_CODE}'}" $SLACK_WEBHOOK_URL
+    curl -X POST -H 'Content-type: application/json' --data "{'text': 'テストMoodle落ちてます:cry:\nステータスコード: ${STATUS_CODE}'}" $SLACK_WEBHOOK_URL
 else
     # テストのために一旦出力
-    curl -X POST -H 'Content-type: application/json' --data "{'text': '正常です。\nステータスコード: ${STATUS_CODE}'}" $SLACK_WEBHOOK_URL
+    curl -X POST -H 'Content-type: application/json' --data "{'text': 'テスト正常です。\nステータスコード: ${STATUS_CODE}'}" $SLACK_WEBHOOK_URL
 fi
