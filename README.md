@@ -1,3 +1,5 @@
+[![Schedule](https://github.com/uopeople-jp/moodle-error-notification/actions/workflows/schedule.yml/badge.svg)](https://github.com/uopeople-jp/moodle-error-notification/actions/workflows/schedule.yml)
+
 # moodle-error-notification
 
 ### 概要
